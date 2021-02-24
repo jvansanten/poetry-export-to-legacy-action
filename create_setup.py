@@ -43,7 +43,7 @@ except (ImportError, ModuleNotFoundError) as ee:
 
 # Generate a Poetry object that knows about the metadata in pyproject.toml
 factory = Factory()
-poetry = factory.create_poetry(os.path.dirname(__file__))
+poetry = factory.create_poetry(".")
 
 # Use the SdistBuilder to genrate a blob for setup.py
 if StrictVersion(__version__) >= StrictVersion("1.1.0b1"):
